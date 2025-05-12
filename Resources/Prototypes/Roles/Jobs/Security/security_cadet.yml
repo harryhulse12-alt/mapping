@@ -108,6 +108,7 @@
     #  inverted: true # Omu edit end
   startingGear: SecurityCadetGear
   icon: "JobIconSecurityCadet"
+  ransomModifier: 2 # DeltaV - Sec is less than heads
   supervisors: job-supervisors-security
   canBeAntag: false
   goobcoins: 30 #Goob content

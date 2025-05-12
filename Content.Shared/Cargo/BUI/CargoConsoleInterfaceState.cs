@@ -5,6 +5,7 @@
 
 using Content.Shared.Cargo.Prototypes;
 using Robust.Shared.Prototypes;
+using Content.Shared._DV.Traitor; // DeltaV
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Cargo.BUI;
@@ -18,8 +19,9 @@ public sealed class CargoConsoleInterfaceState : BoundUserInterfaceState
     public NetEntity Station;
     public List<CargoOrderData> Orders;
     public List<ProtoId<CargoProductPrototype>> Products;
-
-    public CargoConsoleInterfaceState(string name, int count, int capacity, NetEntity station, List<CargoOrderData> orders, List<ProtoId<CargoProductPrototype>> products)
+    public List<RansomData> Ransoms; // DeltaV
+    // DeltaV - added ransoms
+    public CargoConsoleInterfaceState(string name, int count, int capacity, NetEntity station, List<CargoOrderData> orders, List<ProtoId<CargoProductPrototype>> products, List<RansomData> ransoms)
     {
         Name = name;
         Count = count;
@@ -27,5 +29,6 @@ public sealed class CargoConsoleInterfaceState : BoundUserInterfaceState
         Station = station;
         Orders = orders;
         Products = products;
+        Ransoms = ransoms;
     }
 }

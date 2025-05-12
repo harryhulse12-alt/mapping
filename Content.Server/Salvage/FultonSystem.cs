@@ -10,6 +10,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Numerics;
+using Content.Shared._DV.Traitor; // DeltaV
 using Content.Shared.Salvage.Fulton;
 using Robust.Shared.Map;
 using Robust.Shared.Random;
@@ -84,6 +85,10 @@ public sealed class FultonSystem : SharedFultonSystem
                 Coordinates = GetNetCoordinates(oldCoords),
             });
         }
+        // Begin DeltaV Additions: Event for syndicate fultons to use
+        var ev = new FultonedEvent();
+        RaiseLocalEvent(uid, ref ev);
+        // End DeltaV Additions
 
         Audio.PlayPvs(component.Sound, uid);
         RemCompDeferred<FultonedComponent>(uid);

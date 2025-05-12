@@ -618,7 +618,8 @@
     maxCharges: 90
   - type: Sprite
     sprite: Objects/Tools/rpd.rsi
-
+  - type: StealTarget # DeltaV
+    stealGroup: RCD
 
 - type: entity
   id: RCDEmpty

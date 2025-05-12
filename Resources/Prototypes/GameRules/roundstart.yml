@@ -228,6 +228,7 @@
     - NamesOperationSuffix
     nameFormat: name-format-nuclear-operation
   - type: NukeopsRule
+  - type: TeleportDiskRule # DeltaV - syndie fulton disk interaction
   - type: RuleGrids
   - type: AntagSelection
     agentName: nukeops-roundend-name # Goobstation
@@ -327,29 +328,10 @@
   - type: TraitorRule
   # TODO: codewords in yml
   # TODO: uplink in yml
-  - type: AntagSelection
-    agentName: traitor-round-end-agent-name
-
-- type: entity
-  abstract: true
-  parent: BaseTraitorRuleNoObjectives
-  id: BaseTraitorRule
-  components:
-  - type: AntagRandomObjectives
-    sets:
-    - groups: TraitorObjectiveGroups
-    maxDifficulty: 5
-
-# Goobstation - order swapped since admin verbs use .Last() for some reason
-# TODO: Fix that
-- type: entity
-  id: TraitorReinforcement
-  parent: BaseTraitorRuleNoObjectives # Goobstation
-  components:
-  - type: TraitorRule
-    giveUplink: false
-    giveCodewords: false # It would actually give them a different set of codewords than the regular traitors, anyway
-    giveBriefing: false
+  #- type: AntagRandomObjectives # DeltaV - replaced by contracts system
+  #  sets:
+  #  - groups: TraitorObjectiveGroups
+  #  maxDifficulty: 5
   - type: AntagSelection
     selectionTime: PostPlayerSpawn # Goobstation
     definitions:

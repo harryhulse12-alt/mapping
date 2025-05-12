@@ -1,0 +1,7 @@
+# Nonstations
+
+- type: mapCategories
+  id: SyndieJail
+  map: /Maps/_DV/Nonstations/syndie_jail.yml
+  allowed:
+  - Syndicate

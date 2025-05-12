@@ -200,6 +200,9 @@
     Telecrystal: 13 # goob - this +1 mag = 15 TC
   categories:
   - UplinkWeaponry
+  conditions: # DeltaV - Sidearm reputation
+  - !type:ReputationCondition
+    reputation: 40
 
 - type: listing
   id: UplinkRevolverPython
@@ -210,6 +213,9 @@
     Telecrystal: 20 # goob - Originally was 65 TC but was not used due to high cost. and the same happened at 40 TC. +2 mags = 30 TC.
   categories:
   - UplinkWeaponry
+  conditions: # DeltaV - Sidearm reputation
+  - !type:ReputationCondition
+    reputation: 40
 
 
 # Inbuilt suppressor so it's sneaky + more expensive.
@@ -222,6 +228,9 @@
     Telecrystal: 17 # goob - this +1 mag = 20 TC
   categories:
   - UplinkWeaponry
+  conditions: # DeltaV - Sidearm reputation
+  - !type:ReputationCondition
+    reputation: 45
 
 
 # Poor accuracy, slow to fire, cheap option
@@ -234,6 +243,9 @@
     Telecrystal: 4 # goob
   categories:
   - UplinkWeaponry
+  conditions: # DeltaV - Long arm reputation
+  - !type:ReputationCondition
+    reputation: 60
 
 - type: listing
   id: UplinkEsword
@@ -246,6 +258,9 @@
   saleLimit: 2 # Goob - 2 eswords = desword
   categories:
   - UplinkWeaponry
+  conditions: # DeltaV - Melee weapon reputation
+  - !type:ReputationCondition
+    reputation: 30
 
 - type: listing
   id: UplinkEnergyDagger
@@ -257,6 +272,9 @@
     Telecrystal: 10 # goob
   categories:
   - UplinkWeaponry
+  conditions: # DeltaV - Melee weapon reputation
+  - !type:ReputationCondition
+    reputation: 20
 
 
 - type: listing
@@ -269,6 +287,9 @@
     Telecrystal: 20 # goob - Pretty weak, but resusable ranged crit potential shouldn't be less.
   categories:
     - UplinkWeaponry
+  conditions: # DeltaV - Melee weapons reputation
+  - !type:ReputationCondition
+    reputation: 20
 
 
 - type: listing
@@ -280,6 +301,9 @@
     Telecrystal: 30 # goob
   categories:
   - UplinkWeaponry
+  conditions: # DeltaV - Melee weapons reputation
+  - !type:ReputationCondition
+    reputation: 30
 
 
 - type: listing
@@ -297,7 +321,9 @@
  #    blacklist:
  #      tags:
  #        - NukeOpsUplink
-
+  conditions:
+    - !type:ReputationCondition # DeltaV - Long arms(???) reputation
+      reputation: 60
 
 - type: listing
   id: UplinkEshield
@@ -309,7 +335,9 @@
     Telecrystal: 15 # goob
   categories:
   - UplinkWeaponry
-
+  conditions:
+  - !type:ReputationCondition # DeltaV - Sidearms(?????) reputation
+    reputation: 40
 
 - type: listing
   id: UplinkSniperBundle
@@ -321,6 +349,9 @@
     Telecrystal: 75 # goob
   categories:
   - UplinkWeaponry
+  conditions: # DeltaV - Long Arms reputation
+  - !type:ReputationCondition
+    reputation: 60
 
 
 - type: listing
@@ -333,6 +364,9 @@
     Telecrystal: 50 # goob unbunde update
   categories:
   - UplinkWeaponry
+  conditions: # DeltaV - Long Arms reputation
+  - !type:ReputationCondition
+    reputation: 60
 
 - type: listing
   id: UplinkEstoc # goob unbundle
@@ -344,6 +378,9 @@
     Telecrystal: 55 # goob unbundle
   categories:
   - UplinkWeaponry
+  conditions: # DeltaV - Long Arms reputation
+  - !type:ReputationCondition
+    reputation: 60
 
 - type: listing
   id: UplinkBulldog #goob
@@ -367,6 +404,9 @@
     Telecrystal: 150 # goob
   categories:
   - UplinkWeaponry
+  conditions: # DeltaV - High Power Weapons reputation
+  - !type:ReputationCondition
+    reputation: 95
 
 
 - type: listing
@@ -379,6 +419,9 @@
     Telecrystal: 100 # goob
   categories:
   - UplinkWeaponry
+  conditions: # DeltaV - High Power Weapons reputation
+  - !type:ReputationCondition
+    reputation: 80
 
 
 # Explosives
@@ -397,7 +440,8 @@
     blacklist:
       tags:
       - NukeOpsUplink
-
+  - !type:ReputationCondition # DeltaV - Explosives reputation
+    reputation: 40
 
 - type: listing
   id: UplinkExplosiveGrenadeFlash
@@ -440,7 +484,8 @@
     blacklist:
       tags:
       - NukeOpsUplink
-
+  - !type:ReputationCondition # DeltaV - Explosives reputation
+    reputation: 50
 
 - type: listing
   id: UplinkSupermatterGrenade
@@ -456,7 +501,8 @@
     blacklist:
       tags:
       - NukeOpsUplink
-
+  - !type:ReputationCondition # DeltaV - Explosives reputation
+    reputation: 55
 
 - type: listing
   id: UplinkWhiteholeGrenade
@@ -472,7 +518,8 @@
     blacklist:
       tags:
       - NukeOpsUplink
-
+  - !type:ReputationCondition # DeltaV - Explosives reputation
+    reputation: 40
 
 - type: listing
   id: UplinkGrenadePenguin
@@ -488,6 +535,8 @@
     blacklist:
       components:
       - SurplusBundle
+  - !type:ReputationCondition # DeltaV - Explosives reputation
+    reputation: 40
 
 
 - type: listing
@@ -552,7 +601,8 @@
     blacklist:
       tags:
       - NukeOpsUplink
-
+  - !type:ReputationCondition # DeltaV - Explosives reputation
+    reputation: 40
 
 - type: listing
   id: UplinkExplodingPen
@@ -564,6 +614,9 @@
     Telecrystal: 12 # goob
   categories:
   - UplinkExplosives
+  conditions: # DeltaV - Explosives reputation
+  - !type:ReputationCondition
+    reputation: 40
 
 
 - type: listing
@@ -581,6 +634,8 @@
     blacklist:
       tags:
       - NukeOpsUplink
+  - !type:ReputationCondition # DeltaV - More Powerful Explosions reputation
+    reputation: 75
 
 - type: listing
   id: UplinkSyndicateBombNukie
@@ -643,7 +698,8 @@
     blacklist:
       tags:
       - NukeOpsUplink
-
+  - !type:ReputationCondition # DeltaV - Explosives reputation
+    reputation: 45
 
 #- type: listing # Bundles are boring, nades themselves are cheap instead
 #  id: UplinkEmpKit
@@ -769,6 +825,9 @@
     Telecrystal: 30 # goob
   categories:
   - UplinkChemicals
+  conditions: # DeltaV - Chemicals reputation
+  - !type:ReputationCondition
+    reputation: 25
 
 
 - type: listing
@@ -781,6 +840,9 @@
     Telecrystal: 5 # goob
   categories:
   - UplinkChemicals
+  conditions: # DeltaV - Chemicals reputation
+  - !type:ReputationCondition
+    reputation: 20
 
 
 - type: listing
@@ -793,6 +855,9 @@
     Telecrystal: 20 # goob
   categories:
   - UplinkChemicals
+  conditions: # DeltaV - Chemicals reputation
+  - !type:ReputationCondition
+    reputation: 20
 
 
 # Goobstaiton - Disable Zombie Kit
@@ -825,6 +890,9 @@
     Telecrystal: 30 # goob
   categories:
   - UplinkChemicals
+  conditions: # DeltaV - Chemicals reputation
+  - !type:ReputationCondition
+    reputation: 25
 
 
 - type: listing
@@ -836,6 +904,9 @@
     Telecrystal: 10 #goob
   categories:
   - UplinkChemicals
+  conditions: # DeltaV - Chemicals reputation
+  - !type:ReputationCondition
+    reputation: 30
 
 
 - type: listing
@@ -847,6 +918,9 @@
     Telecrystal: 8 # Goobstation - Combat pen rebalance
   categories:
   - UplinkChemicals
+  conditions: # DeltaV - Chemicals reputation
+  - !type:ReputationCondition
+    reputation: 25
 
 
 - type: listing
@@ -858,6 +932,9 @@
     Telecrystal: 10 # goob - 1 TC per 3 seconds.
   categories:
   - UplinkChemicals
+  conditions: # DeltaV - Chemicals reputation
+  - !type:ReputationCondition
+    reputation: 20
 
 
 - type: listing
@@ -869,6 +946,9 @@
     Telecrystal: 40 # goob
   categories:
   - UplinkChemicals
+  conditions: # DeltaV - Chemicals reputation
+  - !type:ReputationCondition
+    reputation: 35
 
 
 - type: listing
@@ -979,6 +1059,9 @@
     Telecrystal: 5 # goob
   categories:
   - UplinkDeception
+  conditions: # DeltaV - Melee Weapons reputation
+  - !type:ReputationCondition
+    reputation: 20
 
 - type: listing
   id: UplinkDecoyDisk
@@ -1014,6 +1097,8 @@
   - !type:BuyerSpeciesCondition
     blacklist:
     - Plasmaman
+  - !type:ReputationCondition # DeltaV - Money is expensive? no bribing fresh out of cryo
+    reputation: 15
 
 # - type: listing
 #   id: UplinkGigacancerScanner
@@ -1046,6 +1131,9 @@
     Telecrystal: 10 # goob
   categories:
   - UplinkDeception
+  conditions: # DeltaV - Explosives, to not have fake syndie bombs 5 minutes into the round
+  - !type:ReputationCondition
+    reputation: 40
 
 # Disruption
 
@@ -1068,6 +1156,9 @@
     Telecrystal: 20 # goob - not quite worth 25
   categories:
   - UplinkDisruption
+  conditions: # DeltaV - it's iconic...
+  - !type:ReputationCondition
+    reputation: 20
 
 
 - type: listing
@@ -1090,6 +1181,9 @@
     Telecrystal: 25 # goob
   categories:
   - UplinkDisruption
+  conditions: # DeltaV - Side Arms reputation
+  - !type:ReputationCondition
+    reputation: 40
 
 
 - type: listing
@@ -1102,6 +1196,9 @@
     Telecrystal: 20 # goob
   categories:
     - UplinkDisruption
+  conditions: # DeltaV - More Powerful Explosions reputation
+  - !type:ReputationCondition
+    reputation: 60
 
 
 - type: listing
@@ -1124,6 +1221,9 @@
     Telecrystal: 6 # goob - Not a GREAT item but has some effects. Bomb Balance.
   categories:
   - UplinkDisruption
+  conditions: # DeltaV - do 1 task before you get super soap
+  - !type:ReputationCondition
+    reputation: 5
 
 
 - type: listing
@@ -1173,6 +1273,8 @@
       blacklist:
         components:
           - SurplusBundle
+  - !type:ReputationCondition # DeltaV - Explosives reputation
+    reputation: 50
 
 # Goob - Not buyable anymore in favor of the custom lawboard.
 #- type: listing
@@ -1278,7 +1380,9 @@
     Telecrystal: 60 # goob
   categories:
     - UplinkDisruption
-
+  conditions: # DeltaV - Station Destructive Items reputation
+  - !type:ReputationCondition
+    reputation: 85
 
 - type: listing
   id: UplinkCameraBug
@@ -1307,6 +1411,8 @@
     blacklist:
       tags:
       - NukeOpsUplink
+  - !type:ReputationCondition # DeltaV - Allies reputation
+    reputation: 50
 
 
 - type: listing
@@ -1325,6 +1431,8 @@
         tags:
           - NukeOpsUplink
           - ContravendUplink
+    - !type:ReputationCondition # DeltaV - Allies reputation
+      reputation: 45
 
 
 # Goobstation - Nukeop reinforcement
@@ -1385,6 +1493,8 @@
           - NukeOpsUplink
           - ContravendUplink
 
+    - !type:ReputationCondition # DeltaV - Allies reputation but its a monkey so less
+      reputation: 30
 
 - type: listing
   id: UplinkReinforcementRadioSyndicateAncestorNukeops # Version for Nukeops that spawns a syndicate monkey with the NukeOperative component.
@@ -1437,6 +1547,8 @@
       blacklist:
         tags:
         - ContravendUplink
+    - !type:ReputationCondition # DeltaV - Allies reputation
+      reputation: 40
 
 
 - type: listing
@@ -1511,6 +1623,9 @@
     Telecrystal: 25 # goob
   categories:
     - UplinkImplants
+  conditions: # DeltaV - You don't need this for stealing shoes...
+  - !type:ReputationCondition
+    reputation: 25
 
 
 - type: listing
@@ -1523,6 +1638,9 @@
     Telecrystal: 10 # goob
   categories:
     - UplinkImplants
+  conditions: # DeltaV - Melee Weapons reputation, its melee range
+  - !type:ReputationCondition
+    reputation: 25
 
 - type: listing
   id: UplinkRadioImplanter
@@ -1551,6 +1669,8 @@
   categories:
   - UplinkImplants
   conditions:
+    - !type:ReputationCondition
+      reputation: 85
   # goob - traitor suicide implants
   #- !type:StoreWhitelistCondition
   #  whitelist:
@@ -1577,7 +1697,11 @@
   - !type:StoreWhitelistCondition
     blacklist:
       tags:
+
+
         - NukeOpsUplink
+  - !type:ReputationCondition
+    reputation: 85
 
 # Goobstation - Fix nukeops macrobomb restock
 - type: listing
@@ -1741,6 +1865,9 @@
     Telecrystal: 30
   categories:
   - UplinkWearables
+  conditions: # DeltaV - They're very strong, shouldn't have it roundstart
+  - !type:ReputationCondition
+    reputation: 20
 
 
 - type: listing
@@ -1752,6 +1879,9 @@
     Telecrystal: 10 # goob
   categories:
   - UplinkWearables
+  conditions: # DeltaV - Armour
+  - !type:ReputationCondition
+    reputation: 15
 
 
 - type: listing
@@ -1763,6 +1893,9 @@
     Telecrystal: 15 # goob
   categories:
   - UplinkWearables
+  conditions: # DeltaV - Armour
+  - !type:ReputationCondition
+    reputation: 15
 
 - type: listing
   id: UplinkClothingShoesBootsMagSyndie
@@ -1785,6 +1918,9 @@
     Telecrystal: 20 # goob - Meh protection no slowdown. Can definitely take a hit or two extra however.
   categories:
   - UplinkWearables
+  conditions: # DeltaV - Evil EVA suit
+  - !type:ReputationCondition
+    reputation: 10
 
 
 - type: listing
@@ -1797,6 +1933,9 @@
     Telecrystal: 20 # goob
   categories:
   - UplinkWearables
+  conditions: # DeltaV - Funny EVA suit
+  - !type:ReputationCondition
+    reputation: 15
 
 
 - type: listing
@@ -1809,6 +1948,9 @@
     Telecrystal: 50 # goob
   categories:
   - UplinkWearables
+  conditions: # DeltaV - Hardsuits reputation
+  - !type:ReputationCondition
+    reputation: 65
 
 
 - type: listing
@@ -1838,6 +1980,9 @@
     Telecrystal: 75 # goob
   categories:
   - UplinkWearables
+  conditions: # DeltaV - Armour
+  - !type:ReputationCondition
+    reputation: 65
   #conditions: # Goobstation - no fuck you
   #- !type:StoreWhitelistCondition
   #  whitelist:
@@ -1855,6 +2000,9 @@
     Telecrystal: 75 # goob
   categories:
   - UplinkWearables
+  conditions: # DeltaV - Armour
+  - !type:ReputationCondition
+    reputation: 65
   #conditions: # Goobstation - no fuck you
   #- !type:StoreWhitelistCondition
   # whitelist:
@@ -2004,6 +2152,9 @@
     Telecrystal: 15 # goob
   categories:
   - UplinkPointless
+  conditions: # DeltaV - Armour
+  - !type:ReputationCondition
+    reputation: 15
 
 - type: listing
   id: UplinkOperativeSuit
@@ -2034,6 +2185,9 @@
     Telecrystal: 100 # goob
   categories:
   - UplinkPointless
+  conditions: # DeltaV
+  - !type:ReputationCondition
+    reputation: 50
 
 
 - type: listing
@@ -2082,7 +2236,9 @@
   - !type:BuyerJobCondition
     whitelist:
     - Botanist
-
+    - ServiceWorker # DeltaV
+  - !type:ReputationCondition # DeltaV - Less than Sidearms as you have to actually grow it
+    reputation: 30
 
 - type: listing
   id: uplinkRiggedBoxingGlovesPassenger # Remove when contractor baton gets added- and yes, i'm working on that - Goobstation, Fenn :3
@@ -2097,6 +2253,8 @@
     - !type:BuyerJobCondition
       whitelist:
         - Passenger
+    - !type:ReputationCondition # DeltaV - Melee Weapons reputation
+      reputation: 20
 
 
 - type: listing
@@ -2112,6 +2270,8 @@
     - !type:BuyerJobCondition
       whitelist:
         - Boxer
+    - !type:ReputationCondition # DeltaV - Melee Weapons reputation
+      reputation: 20
 
 
 - type: listing
@@ -2131,6 +2291,8 @@
     blacklist:
       components:
       - SurplusBundle
+  - !type:ReputationCondition # DeltaV - Allies reputation
+    reputation: 40
 
 
 - type: listing
@@ -2146,6 +2308,8 @@
   - !type:BuyerJobCondition
     whitelist:
     - Chaplain
+  - !type:ReputationCondition # DeltaV - More Powerful Explosions
+    reputation: 70
 
 
 - type: listing
@@ -2162,6 +2326,8 @@
     whitelist:
     - Mime
     - Clown
+  - !type:ReputationCondition # DeltaV - Sidearms reputation
+    reputation: 40
 
 
 - type: listing
@@ -2178,6 +2344,8 @@
   - !type:BuyerJobCondition
     whitelist:
     - Clown
+  - !type:ReputationCondition # DeltaV - Explosives reputation
+    reputation: 40
 
 
 - type: listing
@@ -2193,6 +2361,8 @@
   - !type:BuyerJobCondition
     whitelist:
     - Clown
+  - !type:ReputationCondition # DeltaV - More Powerful Explosions reputation
+    reputation: 65
 
 
 - type: listing
@@ -2209,6 +2379,8 @@
   - !type:BuyerJobCondition
     whitelist:
     - Clown
+  - !type:ReputationCondition # DeltaV - Allies reputation
+    reputation: 45
 
 
 - type: listing
@@ -2227,7 +2399,9 @@
     - Botanist
     - Clown
     - Mime
-
+    - ServiceWorker # DeltaV
+  - !type:ReputationCondition # DeltaV - Explosives reputation
+    reputation: 40
 
 - type: listing
   id: UplinkChimpUpgradeKit
@@ -2242,7 +2416,8 @@
     - !type:BuyerDepartmentCondition
       whitelist:
       - Science
-
+    - !type:ReputationCondition # DeltaV - Sidearms reputation
+      reputation: 40
 
 - type: listing
   id: uplinkProximityMine
@@ -2261,6 +2436,8 @@
     blacklist:
       components:
       - SurplusBundle
+  - !type:ReputationCondition # DeltaV - Explosives reputation
+    reputation: 45
 
 
 - type: listing
@@ -2296,11 +2473,12 @@
   - !type:BuyerJobCondition
     whitelist:
     - Librarian
-  #- !type:BuyerWhitelistCondition
-  #  blacklist:
-  #    components:
-  #    - SurplusBundle
-
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle
+  - !type:ReputationCondition # DeltaV - Melee Weapons reputation
+    reputation: 20
 
 - type: listing
   id: UplinkCombatBakery
@@ -2317,6 +2495,8 @@
     whitelist:
     - Chef
     - Mime
+  - !type:ReputationCondition # DeltaV - Melee Weapons reputation
+    reputation: 20
 
 - type: listing
   id: UplinkContrabandLighter

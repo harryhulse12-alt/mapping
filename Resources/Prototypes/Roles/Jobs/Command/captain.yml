@@ -167,6 +167,7 @@
   weight: 20
   startingGear: CaptainGear
   icon: "JobIconCaptain"
+  ransomModifier: 5 # DeltaV - Most important of them all
   joinNotifyCrew: true
   supervisors: job-supervisors-centcom
   canBeAntag: false

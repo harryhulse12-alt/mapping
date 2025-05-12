@@ -130,6 +130,7 @@ public abstract partial class SharedFultonSystem : EntitySystem
 
     private void OnFultonContainerInserted(EntityUid uid, FultonedComponent component, EntGotInsertedIntoContainerMessage args)
     {
+        if (!component.Removeable) return; // DeltaV
         RemCompDeferred<FultonedComponent>(uid);
     }
 
@@ -244,7 +245,7 @@ public abstract partial class SharedFultonSystem : EntitySystem
         Dirty(args.NewId, newFulton);
     }
 
-    protected virtual void UpdateAppearance(EntityUid uid, FultonedComponent fultoned)
+    public virtual void UpdateAppearance(EntityUid uid, FultonedComponent fultoned) // DeltaV - made public
     {
         return;
     }

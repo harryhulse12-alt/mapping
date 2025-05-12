@@ -94,6 +94,7 @@
       time: 18000 #5 hours - Omu Edit: Coupled with the SecurityCadet req changes.
   startingGear: SecurityOfficerGear
   icon: "JobIconSecurityOfficer"
+  ransomModifier: 2 # DeltaV - Sec is less than heads
   supervisors: job-supervisors-hos
   canBeAntag: false
   goobcoins: 30 #Goob content

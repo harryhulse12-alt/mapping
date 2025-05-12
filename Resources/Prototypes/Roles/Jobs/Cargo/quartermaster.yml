@@ -146,6 +146,7 @@
   weight: 10
   startingGear: QuartermasterGear
   icon: "JobIconQuarterMaster"
+  ransomModifier: 2 # DeltaV - less than other heads since if you lose LO its probably harder to get money
   supervisors: job-supervisors-captain
   #canBeAntag: false
   antagAdvantage: 75 # Goobstation

@@ -153,6 +153,7 @@
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"
+  ransomModifier: 3 # DeltaV
   supervisors: job-supervisors-captain
   #canBeAntag: false
   antagAdvantage: 75 # Goobstation

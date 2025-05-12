@@ -21,6 +21,7 @@
   goobcoins: 20 # Goob Content
   startingGear: AdminAssistantGear
   icon: "JobIconAdminAssitant"
+  ransomModifier: 3
   supervisors: job-supervisors-command
   canBeAntag: true # Goob - Changed to true for Corpo Agents
   access:

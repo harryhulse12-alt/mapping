@@ -72,8 +72,35 @@ public sealed class PickObjectiveTargetSystem : EntitySystem
 
     private void OnRandomPersonAssigned(Entity<PickRandomPersonComponent> ent, ref ObjectiveAssignedEvent args)
     {
-        // invalid objective prototype
-        if (!TryComp<TargetObjectiveComponent>(ent.Owner, out var target))
+        // Begin DeltaV Changes - replaced copy pasta with this
+        Predicate<EntityUid> pred = ent.Comp.OnlyChoosableJobs
+            ? mindId =>
+                _role.MindHasRole<JobRoleComponent>(mindId, out var role) &&
+                role?.Comp1.JobPrototype is {} jobId &&
+                _proto.Index(jobId).SetPreference
+            : _ => true;
+        AssignRandomTarget(ent, ref args, pred);
+        // End DeltaV Changes - replaced copy pasta with this
+    }
+
+    private void OnRandomHeadAssigned(Entity<PickRandomHeadComponent> ent, ref ObjectiveAssignedEvent args)
+    {
+        // Begin DeltaV Changes - replaced copy pasta with this
+        AssignRandomTarget(ent, ref args, mindId =>
+            TryComp<MindComponent>(mindId, out var mind) &&
+            mind.OwnedEntity is { } ownedEnt &&
+            HasComp<CommandStaffComponent>(ownedEnt));
+        // End DeltaV Changes - replaced copy pasta with this
+    }
+
+    /// <summary>
+    /// DeltaV - Common code deduplicated from above functions.
+    /// Filters all alive humans and picks a target from them.
+    /// </summary>
+    public void AssignRandomTarget(EntityUid uid, ref ObjectiveAssignedEvent args, Predicate<EntityUid> filter, bool fallbackToAny = true)
+    {
+        // invalid prototype
+        if (!TryComp<TargetObjectiveComponent>(uid, out var target))
         {
             args.Cancelled = true;
             return;
@@ -95,8 +122,25 @@ public sealed class PickObjectiveTargetSystem : EntitySystem
             }
         }
 
-        // no other humans to kill
-        if (allHumans.Count == 0)
+        // Begin DeltaV Additions - no being asked to kill someone at centcom or whatever
+        if (args.Mind.OwnedEntity is {} mob)
+        {
+            var map = Transform(mob).MapID;
+            allHumans.RemoveAll(mindId =>
+            {
+                if (Comp<MindComponent>(mindId).OwnedEntity is {} otherMob)
+                    return Transform(otherMob).MapID != map;
+
+                return false;
+            });
+        }
+        // End DeltaV Additions
+
+        // Filter out targets based on the filter
+        var filteredHumans = allHumans.Where(mind => filter(mind)).ToList();
+
+        // There's no humans and we can't fall back to any other target
+        if (filteredHumans.Count == 0 && !fallbackToAny)
         {
             args.Cancelled = true;
             return;
@@ -131,7 +175,7 @@ public sealed class PickObjectiveTargetSystem : EntitySystem
         {
             if (TryComp<MindComponent>(person, out var mind) && mind.OwnedEntity is { } owned && HasComp<CommandStaffComponent>(owned) && !HasComp<NukeOperativeComponent>(owned))
                 allHeads.Add(person); // Goob edit - exclude nuke ops from being selected as heads (bruh why would you even want that)
-        } 
+        }
 
         // Goobstation - Cancel if there is no command staff
         if (allHeads.Count == 0)

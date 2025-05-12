@@ -183,6 +183,12 @@ namespace Content.Shared.Roles
         public bool CanBeAntag { get; private set; } = true;
 
         /// <summary>
+        /// DeltaV: Multiplies syndicate ransom price by this number.
+        /// </summary>
+        [DataField]
+        public float RansomModifier = 1f;
+
+        /// <summary>
         ///     The "weight" or importance of this job. If this number is large, the job system will assign this job
         ///     before assigning other jobs.
         /// </summary>

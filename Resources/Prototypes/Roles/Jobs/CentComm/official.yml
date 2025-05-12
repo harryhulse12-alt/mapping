@@ -39,14 +39,15 @@
   setPreference: false
   startingGear: CentcomGear
   icon: "JobIconNanotrasen"
+  ransomModifier: 10 # DeltaV - wow
   supervisors: job-supervisors-centcom # Goobstation
   canBeAntag: false
   requirements:
   - !type:AgeRequirement
     requiredAge: 21
-#    - !type:SpeciesRequirement # Goob - None Felinid	
-#      inverted: true	
-#      species:	
+#    - !type:SpeciesRequirement # Goob - None Felinid
+#      inverted: true
+#      species:
 #      - Felinid #Omu, add back Felinid
   accessGroups:
   - AllAccess

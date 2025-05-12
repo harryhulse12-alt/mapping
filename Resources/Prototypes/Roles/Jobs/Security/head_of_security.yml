@@ -166,6 +166,7 @@
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"
+  ransomModifier: 4 # DeltaV - between heads and cap, unrobust
   supervisors: job-supervisors-captain
   canBeAntag: false
   goobcoins: 45 #Goob content
