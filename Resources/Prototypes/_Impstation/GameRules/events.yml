@@ -1,0 +1,23 @@
+- type: entity  #Eeplet ported from Imp and changed to work with game director
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    earliestStart: 40
+    weight: 4
+    minimumPlayers: 20
+    duration: 1
+    chaos: #Goobstation
+      Hostile: 100
+      Medical: 100
+      Death: 100
+    eventType: HostilesSpawn
+  - type: GameRule
+    chaosScore: 300
+  - type: SpaceSpawnRule
+    spawnDistance: 0
+  - type: AntagSelection
+    definitions:
+    - spawnerPrototype: SpawnPointGhostEeeplet
+      min: 1
+      max: 2
+      prob: 0.1

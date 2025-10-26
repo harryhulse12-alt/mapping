@@ -199,6 +199,8 @@
     - id: SlaughterDemonMidround # Goobstation - Slaughter Demon
     - id: XenomorphsInfestation # WD EDIT
    # - id: WraithMidround # Goobstation - Wraith - OMU Wraith is unbalanced and shit to deal with
+    - id: WizardSpawn
+    - id: EeepEvent # imp
 
 - type: entity
   id: BaseStationEvent
