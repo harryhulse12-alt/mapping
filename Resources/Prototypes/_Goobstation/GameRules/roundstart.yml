@@ -48,7 +48,7 @@
   components:
   - type: ChangelingRule
   - type: GameRule
-    minPlayers: 20 # Omu, was 15
+    minPlayers: 30 # Omu, was 15
   - type: AntagRandomObjectives
     sets:
     - groups: ChangelingObjectiveGroups
