@@ -23,7 +23,7 @@
   components:
   - type: HereticRule
   - type: GameRule
-    minPlayers: 20 # Omu, was 15, we do not need heretics on lowpop.
+    minPlayers: 30 # Omu, was 15, we do not need heretics on lowpop.
   - type: AntagObjectives
     objectives:
     - HereticKnowledgeObjective
