@@ -479,7 +479,7 @@
     - id: ClothingEyesGlassesSciDiag # Omustation - HUD that lets RD talk in binary hivemind!
     - id: MMI # Goobstation
     - id: ComputerScienceCommsFlatpack #Omu adds departmental comms board
-    - id: Multitool
+    - id: Multitool # Omu
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
