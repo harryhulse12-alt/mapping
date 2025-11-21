@@ -301,7 +301,7 @@
     - id: ServiceTechFabCircuitboard # Goobstation - Service Techfab
     - id: CommandMegaphone # goob - loudspeakers
     - id: ComputerServiceCommsFlatpack #Omu adds departmental comms board
-    - id: Multitool
+    - id: Multitool # Omu
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
