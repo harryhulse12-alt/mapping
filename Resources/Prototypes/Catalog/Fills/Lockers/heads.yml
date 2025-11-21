@@ -543,7 +543,7 @@
     - id: DrinkHosFlask
     - id: HeadOfSecurityMeleeCase # Omu
     - id: ComputerSecurityCommsFlatpack #Omu adds departmental comms board
-    - id: Multitool
+    - id: Multitool # Omu
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
