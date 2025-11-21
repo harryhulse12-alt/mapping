@@ -69,7 +69,7 @@
     definitions:
     - prefRoles: [ Heretic ]
       max: 2
-      playerRatio: 20 # Omu, was 15, we don't need multiple heretics on lowpop, especialy not for a "calm" gamerule.
+      playerRatio: 30 # Omu, was 15, we don't need multiple heretics on lowpop, especialy not for a "calm" gamerule.
       lateJoinAdditional: true
       jobBlacklist: [ Chaplain ] # GOOBSTATION
       blacklist:
