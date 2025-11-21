@@ -174,7 +174,7 @@
     - id: SalvageJobBoardComputerCircuitboard # Goobstation - This doesn't really have a use right now but it's there incase it ever gets use again
     - id: CargoMegaphone # goob - loudspeaker
     - id: ComputerCargoCommsFlatpack #Omu adds departmental comms board
-    - id: Multitool
+    - id: Multitool # Omu
 
 - type: entity
   id: LockerQuarterMasterFilled
