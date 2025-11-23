@@ -19,7 +19,7 @@ public sealed class TriggerOnBatteryFullSystem : EntitySystem
         SubscribeLocalEvent<TriggerOnBatteryFullComponent, ChargeChangedEvent>(OnChargeChanged);
     }
 
-    private void OnChargeChanged(Entity<PowerCellComponent> ent, ref ChargeChangedEvent args)
+    private void OnChargeChanged(Entity<TriggerOnBatteryFullComponent> ent, ref ChargeChangedEvent args)
     {
         if (TryComp(ent.Owner, out BatteryComponent? battery) && _battery.IsFull(ent.Owner, battery))
         {
