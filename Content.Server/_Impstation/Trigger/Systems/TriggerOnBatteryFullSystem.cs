@@ -23,7 +23,7 @@ public sealed class TriggerOnBatteryFullSystem : EntitySystem
     {
         if (TryComp(ent.Owner, out BatteryComponent? battery) && _battery.IsFull(ent.Owner, battery))
         {
-            _trigger.Trigger(ent);
+            _trigger.Trigger(ent,ent);
         }
     }
 }
