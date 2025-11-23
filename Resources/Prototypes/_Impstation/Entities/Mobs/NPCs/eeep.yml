@@ -75,8 +75,6 @@
     - TemporaryBlindness
     - RadiationProtection
     - Pacified
-  - type: GoobAbsorbable
-    biomassRestored: 0.1
   - type: FlavorProfile
     flavors:
       - jelly
@@ -204,8 +202,6 @@
       0: Alive
       400: Critical
       450: Dead
-  - type: GoobAbsorbable
-    biomassRestored: 0.8
   - type: AmbientSound
     volume: -3
     range: 4

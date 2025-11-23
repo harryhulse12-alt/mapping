@@ -1,5 +1,6 @@
 - type: entity  #Eeplet ported from Imp and changed to work with game director
-  parent: BaseStationEventShortDelay
+  id: EepletSpawn
+  parent: BaseGameRule
   components:
   - type: StationEvent
     earliestStart: 40
