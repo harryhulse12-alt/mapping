@@ -175,6 +175,7 @@
     - id: CargoMegaphone # goob - loudspeaker
     - id: ComputerCargoCommsFlatpack #Omu adds departmental comms board
     - id: Multitool # Omu
+    - id: SlotMachineHighRollerFlatPack # Goob - gambling
 
 - type: entity
   id: LockerQuarterMasterFilled
