@@ -19,6 +19,10 @@
   - type: Speech
     speechSounds: Pop
     speechVerb: Slime
+    allowedEmotes: ['zap','hum']
+  - type: Vocal
+    sounds:
+      Unsexed: Eeepmotesounds
   - type: ReplacementAccent
     accent: eeep
   - type: Bloodstream
@@ -120,7 +124,6 @@
     damage: 40 # stun and run away type combat
   - type: NightVision # EE edit
     isActive: true
-    toggleAction: null
     color: "#50595C"
     activateSound: null
     deactivateSound: null
@@ -219,6 +222,7 @@
       path: /Audio/Effects/Lightning/lightningshock.ogg
       params:
         variation: 0.2
+    soundEmpty : null
   - type: ProjectileBatteryAmmoProvider
     proto: EeepGunBullet
     fireCost: 200

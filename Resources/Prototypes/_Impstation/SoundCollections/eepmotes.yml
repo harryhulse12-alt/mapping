@@ -1,0 +1,24 @@
+#original to Omu
+- type: emote
+  id: Zap
+  name: Zap
+  category: Vocal
+  icon: Interface/Emotes/squish.png
+  chatMessages: [zaps.]
+  chatTriggers:
+  - zap
+  - zaps
+  - zapping
+  - zapped
+
+- type: emote
+  id: Hum
+  name: Hum
+  category: Vocal
+  icon: Interface/Emotes/squish.png
+  chatMessages: [hums.]
+  chatTriggers:
+  - hum
+  - hums
+  - humming
+  - hummed

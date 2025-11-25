@@ -26,3 +26,11 @@
       collection: Weh
   params:
     variation: 0.125
+
+- type: emoteSounds
+  id: Eeepmotesounds
+  sounds:
+    Zap:
+      path: /Audio/Effects/Lightning/lightningbolt.ogg
+    Hum:
+      path: /Audio/Effects/Lightning/lightningbolt.ogg
