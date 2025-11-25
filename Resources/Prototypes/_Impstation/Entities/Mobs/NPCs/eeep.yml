@@ -27,7 +27,7 @@
     accent: eeep
   - type: Bloodstream
     bloodMaxVolume: 200
-    bloodReagent: WeldingCoils
+    bloodReagent: AmmoniaBlood
   - type: MobMover
   - type: InputMover
   - type: MovementSpeedModifier
