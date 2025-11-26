@@ -1,4 +1,4 @@
-#original to Omu
+#original to Omu, Bah and Bleat noises credit to Xani
 - type: emote
   id: Zap
   name: Zap
@@ -22,3 +22,15 @@
   - hums
   - humming
   - hummed
+
+- type: emote
+  id: Bah
+  name: Bah
+  category: Vocal
+  Icon: Interface/Emotes/squish.png
+  chatMessages: [bahs.]
+  chatTriggers:
+  - bah
+  - bahs
+  - bahhing
+  - bahhed

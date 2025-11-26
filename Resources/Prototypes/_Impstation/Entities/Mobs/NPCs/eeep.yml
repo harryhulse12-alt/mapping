@@ -27,7 +27,7 @@
     accent: eeep
   - type: Bloodstream
     bloodMaxVolume: 200
-    bloodReagent: AmmoniaBlood
+    bloodReagent: lithium
   - type: MobMover
   - type: InputMover
   - type: MovementSpeedModifier
@@ -179,7 +179,7 @@
   components:
   - type: Bloodstream
     bloodMaxVolume: 400
-    bloodReagent: WeldingCoils
+    bloodReagent: lithium
   - type: Electrified
     requirePower: false
     shockDamage: 4

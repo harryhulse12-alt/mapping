@@ -33,4 +33,8 @@
     Zap:
       path: /Audio/Effects/Lightning/lightningbolt.ogg
     Hum:
-      path: /Audio/Effects/Lightning/lightningbolt.ogg
+      path: /Audio/Effects/tesla_consume.ogg
+    Bah:
+      collection: BahSC
+  params:
+    variation: 0.125

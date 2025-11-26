@@ -17,3 +17,10 @@
   id: Cracks
   files:
     - /Audio/_Impstation/Effects/Emotes/knuckles.ogg
+
+#original to Omu, Bah and Bleat noises credit to Xani
+- type: soundCollection
+  id: BahSC
+  files:
+    - /Audio/_Impstation/Effects/Emotes/beeh-long.ogg
+    - /Audio/_Impstation/Effects/Emotes/beeh-short.ogg
