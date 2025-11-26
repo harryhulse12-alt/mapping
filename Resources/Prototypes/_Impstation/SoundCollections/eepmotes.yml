@@ -27,7 +27,7 @@
   id: Bah
   name: Bah
   category: Vocal
-  Icon: Interface/Emotes/squish.png
+  icon: Interface/Emotes/squish.png
   chatMessages: [bahs.]
   chatTriggers:
   - bah

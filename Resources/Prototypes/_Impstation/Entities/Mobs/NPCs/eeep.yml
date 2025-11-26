@@ -19,7 +19,6 @@
   - type: Speech
     speechSounds: Pop
     speechVerb: Slime
-    allowedEmotes: ['zap','hum']
   - type: Vocal
     sounds:
       Unsexed: Eeepmotesounds
@@ -27,7 +26,7 @@
     accent: eeep
   - type: Bloodstream
     bloodMaxVolume: 200
-    bloodReagent: lithium
+    bloodReagent: Lithium
   - type: MobMover
   - type: InputMover
   - type: MovementSpeedModifier
@@ -179,7 +178,7 @@
   components:
   - type: Bloodstream
     bloodMaxVolume: 400
-    bloodReagent: lithium
+    bloodReagent: Lithium
   - type: Electrified
     requirePower: false
     shockDamage: 4
