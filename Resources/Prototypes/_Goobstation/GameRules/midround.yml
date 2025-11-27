@@ -59,10 +59,10 @@
   - type: StationEvent
     earliestStart: 20
     weight: 3
-    minimumPlayers: 15
-    startAnnouncement: station-event-communication-interception
-    startAudio:
-      path: /Audio/Announcements/intercept.ogg
+    minimumPlayers: 30 #OMU, raises to 30 (from 15) in-line with roundstart rule
+    #startAnnouncement: station-event-communication-interception
+    #startAudio:
+    #  path: /Audio/Announcements/intercept.ogg                Omu Change - removes announcement for midrounds
     duration: null
     occursDuringRoundEnd: false
     chaos:
@@ -71,7 +71,7 @@
       Death: 150
     eventType: HostilesSpawn
   - type: GameRule
-    chaosScore: 300
+    chaosScore: 400 #OMU raises to 400 from 300, in line with less antags
   - type: AlertLevelInterceptionRule
   - type: AntagSelection
     selectionTime: PostPlayerSpawn
@@ -79,7 +79,7 @@
     definitions:
     - prefRoles: [ Changeling ]
       max: 1
-      playerRatio: 10
+      playerRatio: 20 #OMU raises to 20 from 10, in line with roundstart rule
       blacklist:
         components:
         - CommandStaff
@@ -100,10 +100,10 @@
   - type: StationEvent
     earliestStart: 20
     weight: 3
-    minimumPlayers: 100 # OMU change - removes from valid event pool
-    startAnnouncement: station-event-communication-interception
-    startAudio:
-      path: /Audio/Announcements/intercept.ogg
+    minimumPlayers: 30 # OMU change - lowered to 30, now they are actively a thing.
+    #startAnnouncement: station-event-communication-interception
+    #startAudio:
+    #  path: /Audio/Announcements/intercept.ogg               OMU change - removes announcement for midrounds
     duration: null
     occursDuringRoundEnd: false
     chaos:
@@ -112,7 +112,7 @@
       Death: 200
     eventType: HostilesSpawn
   - type: GameRule
-    chaosScore: 300
+    chaosScore: 400 #OMU raises to 400 from 300 in line with less antags
   - type: AlertLevelInterceptionRule
   - type: AntagSelection
     selectionTime: PostPlayerSpawn
