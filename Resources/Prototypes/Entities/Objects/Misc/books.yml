@@ -647,3 +647,10 @@
       color: gold
   - type: Paper
     content: book-text-atmos-vents
+
+#Omu heretic tomes
+- type: entity
+  parent: BookRandom
+  id: TomeBad
+  components:
+   - type: KnowledgeRead

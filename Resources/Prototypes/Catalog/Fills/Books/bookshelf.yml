@@ -45,6 +45,11 @@
       rolls: !type:RangeNumberSelector
         range: 0, 3
       tableId: RandomHandwrittenBookTable
+    #OMU - Heretical Tomes
+    - !type:NestedSelector
+      rolls: !type:RangeNumberSelector
+        range: 0, 1
+      tableId: RandomHereticTome
 
 - type: entityTable
   id: RandomHandwrittenBookTable
@@ -109,3 +114,10 @@
       tableId: RandomGuidebookTable
     - !type:NestedSelector
       tableId: RandomHandwrittenBookTable
+
+  #OMU eldritch tome table, good refers to crew aiding books, bad refers to heretic tomes
+- type: entityTable
+  id: RandomHereticTome
+  table: !type:GroupSelector
+  children:
+  - id: TomeBad
