@@ -14,9 +14,9 @@ using System.Linq;
 using Robust.Shared.Serialization.Manager;
 using Content.Shared.Examine;
 using Content.Shared._Goobstation.Heretic.Components;
-using Content.Omu.Server.HereticalTome;
+using Content.Omu.Server.HereticalTome.Components;
 
-namespace Content.Omu.Server.HereticalTome.KnowledgeReadSystem;
+namespace Content.Omu.Server.HereticalTome;
 
 public sealed class KnowledgeReadSystem : entitysystem
 {
@@ -29,12 +29,13 @@ private void InitializeTrigger()
 
 private void OnTrigger(EntityUid performer, ref TriggerEvent args)
 {
+
     if (args.user == null)
         return;
 
     if (HasComp<HereticComponent>(performer))
     {
-    _knowledge.AddKnowledge(performer, hereticComp, (ProtoId<HereticKnowledgePrototype>) 1);
+    _knowledge.AddKnowledge(performer, hereticComp, (ProtoId<HereticKnowledgePrototype>) knowledgebook);
     }
 }
 }

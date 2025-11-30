@@ -1,4 +1,0 @@
-namespace Content.Omu.Server.HereticalTome;
-
-[RegisterComponent]
-public sealed partial class KnowledgeReadComponent : Component { }
