@@ -119,5 +119,5 @@
 - type: entityTable
   id: RandomHereticTome
   table: !type:GroupSelector
-  children:
-  - id: TomeBad
+    children:
+    - id: TomeBad

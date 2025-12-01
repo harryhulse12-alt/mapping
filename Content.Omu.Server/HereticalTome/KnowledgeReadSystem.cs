@@ -6,8 +6,6 @@ using Content.Shared.Heretic;
 using Content.Shared.Interaction;
 using Content.Shared.Popups;
 using Content.Shared.Tag;
-using Robust.Shared.Audio;
-using Robust.Shared.Audio.Systems;
 using Robust.Shared.Prototypes;
 using System.Text;
 using System.Linq;
@@ -15,27 +13,34 @@ using Robust.Shared.Serialization.Manager;
 using Content.Shared.Examine;
 using Content.Shared._Goobstation.Heretic.Components;
 using Content.Omu.Server.HereticalTome.Components;
+using Content.Server.Heretic.EntitySystems;
+using Content.Server.Heretic.EntitySystems;
+using Content.Shared.Heretic;
+using Robust.Server.GameObjects;
 
 namespace Content.Omu.Server.HereticalTome;
 
-public sealed class KnowledgeReadSystem : entitysystem
+public sealed class KnowledgeReadSystem : EntitySystem
 {
+    private HereticSystem _heretic = default!;
 [Dependency] private readonly HereticKnowledgeSystem _knowledge = default!;
 
-private void InitializeTrigger()
+public override void Initialize()
 {
-    SubscribeLocalEvent<KnowledgeReadComponent, TriggerEvent>(OnTrigger);
+    base.Initialize();
+    SubscribeLocalEvent<KnowledgeReadComponent, TriggerEvent>(OnTriggerBooks);
 }
 
-private void OnTrigger(EntityUid performer, ref TriggerEvent args)
+private void OnTriggerBooks(EntityUid performer, KnowledgeReadComponent component, ref TriggerEvent args)
 {
-
-    if (args.user == null)
-        return;
 
     if (HasComp<HereticComponent>(performer))
     {
-    _knowledge.AddKnowledge(performer, hereticComp, (ProtoId<HereticKnowledgePrototype>) knowledgebook);
+        TryComp<HereticComponent>(performer, out var heretic);
+        if (heretic == null)
+        return;
+
+        _heretic.UpdateKnowledge(performer, heretic, component.KnowledgeBook);
     }
 }
 }

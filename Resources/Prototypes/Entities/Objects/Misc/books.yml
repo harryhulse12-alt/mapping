@@ -654,3 +654,4 @@
   id: TomeBad
   components:
    - type: KnowledgeRead
+   - type: TriggerOnUse
