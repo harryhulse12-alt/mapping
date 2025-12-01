@@ -42,5 +42,8 @@ private void OnTriggerBooks(EntityUid performer, KnowledgeReadComponent componen
 
         _heretic.UpdateKnowledge(performer, heretic, component.KnowledgeBook);
     }
+
+args.Handled = true;
+
 }
 }
