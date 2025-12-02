@@ -202,8 +202,7 @@
     - id: BingleSpawn #Goobstation - Bingle
     - id: SlaughterDemonMidround # Goobstation - Slaughter Demon
     - id: XenomorphsInfestation # WD EDIT
-   # - id: WraithMidround # Goobstation - Wraith - OMU Wraith is unbalanced and shit to deal with
-    #TODO When Slasher is Ready - id: SlasherSpawn # Goobstation - The Slasher
+    - id: WraithMidround # Goobstation - Wraith
 
 - type: entity
   id: BaseStationEvent
