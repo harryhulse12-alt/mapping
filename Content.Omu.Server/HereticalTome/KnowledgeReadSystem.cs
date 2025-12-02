@@ -1,4 +1,3 @@
-
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Heretic.Components;
 using Content.Shared.Heretic.Prototypes;
@@ -16,34 +15,32 @@ using Content.Omu.Server.HereticalTome.Components;
 using Content.Server.Heretic.EntitySystems;
 using Content.Server.Heretic.EntitySystems;
 using Content.Shared.Heretic;
+using Content.Shared.Interaction.Events;
 using Robust.Server.GameObjects;
 
 namespace Content.Omu.Server.HereticalTome;
 
 public sealed class KnowledgeReadSystem : EntitySystem
 {
-    private HereticSystem _heretic = default!;
+    [Dependency] private readonly HereticSystem _heretic = default!;
 [Dependency] private readonly HereticKnowledgeSystem _knowledge = default!;
 
 public override void Initialize()
 {
     base.Initialize();
-    SubscribeLocalEvent<KnowledgeReadComponent, TriggerEvent>(OnTriggerBooks);
+    SubscribeLocalEvent<KnowledgeReadComponent, UseInHandEvent>(OnTriggerBooks);
 }
 
-private void OnTriggerBooks(EntityUid performer, KnowledgeReadComponent component, ref TriggerEvent args)
+private void OnTriggerBooks(EntityUid book, KnowledgeReadComponent component, ref UseInHandEvent args)
 {
+        if (!TryComp<HereticComponent>(args.User, out var heretic))
+            return;
+        var knowledge =  component.KnowledgeBook;
 
-    if (HasComp<HereticComponent>(performer))
-    {
-        TryComp<HereticComponent>(performer, out var heretic);
-        if (heretic == null)
-        return;
+        _heretic.UpdateKnowledge(heretic.Owner, heretic, knowledge);
+        RemComp<KnowledgeReadComponent>(component.Owner);
 
-        _heretic.UpdateKnowledge(performer, heretic, component.KnowledgeBook);
-    }
-
-args.Handled = true;
+        args.Handled = true;
 
 }
 }
