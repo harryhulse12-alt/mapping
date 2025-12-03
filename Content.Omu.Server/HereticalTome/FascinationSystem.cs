@@ -14,25 +14,25 @@ public sealed class FascinationSystem: EntitySystem
 public override void Initialize()
 {
     base.Initialize();
-    SubscribeLocalEvent<FascinationComponent, FacinationUpdateEvent>(UpdateDesc);
+    SubscribeLocalEvent<FascinationComponent, FascinationUpdateEvent>(UpdateDesc);
     SubscribeLocalEvent<FascinationComponent, ExaminedEvent>(OnExamined);
 }
 
 private void UpdateDesc(EntityUid uid, FascinationComponent comp, ref FascinationUpdateEvent Eventargs)
 {
-    switch(Fascination)
+    switch(FascinationInt)
         {
-            case 0: FascinationDesc = Loc.getstring("Fascination-0"); break;
+            case 0: FascinationDesc = Loc.GetString("Fascination-0"); break;
 
-            case 1: FascinationDesc = Loc.getstring("Fascination-1"); break;
+            case 1: FascinationDesc = Loc.GetString("Fascination-1"); break;
 
-            case 2: FascinationDesc = Loc.getstring("Fascination-2"); break;
+            case 2: FascinationDesc = Loc.GetString("Fascination-2"); break;
 
-            case 3: FascinationDesc = Loc.getstring("Fascination-3"); break;
+            case 3: FascinationDesc = Loc.GetString("Fascination-3"); break;
 
-            case 4: FascinationDesc = Loc.getstring("Fascination-4"); break;
+            case 4: FascinationDesc = Loc.GetString("Fascination-4"); break;
 
-            case 5: FascinationDesc = Loc.getstring("Fascination-5"); break;
+            case 5: FascinationDesc = Loc.GetString("Fascination-5"); break;
         }
 
 }
