@@ -1,6 +1,7 @@
+using Robust.Shared.GameObjects;
 namespace Content.Omu.Server.HereticalTome.Components;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class FascinationComponent : Component
 {
     /// <summary>
@@ -8,4 +9,7 @@ public sealed partial class FascinationComponent : Component
     /// </summary>
     [DataField("Fascination")]
     public float Fascination = 0f;
+
+    [Datafield("FascinationDesc")]
+    public string FascinationDesc;
 }

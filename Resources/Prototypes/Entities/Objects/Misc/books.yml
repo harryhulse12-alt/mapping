@@ -652,6 +652,7 @@
 - type: entity
   parent: BookRandom
   id: TomeBad
+  description: Something is off about this book
   components:
    - type: KnowledgeRead
    - type: TriggerOnUse
