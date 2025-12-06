@@ -1,0 +1,9 @@
+- type: damageModifierSet
+  id: CybersunShotgun
+  coefficients:
+    Cold: 0.0
+    Blunt: 1.5
+    Piercing: 0.7
+  flatReductions:
+    Blunt: -2
+    Piercing: 5

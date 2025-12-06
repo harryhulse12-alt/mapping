@@ -1,0 +1,109 @@
+- type: entity
+  parent: [SimpleSpaceMobBase]
+  id: BossMobShotgun
+  suffix: ""
+  name: Cybersun Roomsweeper
+  description: A highly advanced Cybersun prototype, loosely based on the syndicate assault cyborg. Most of its internals have been replaced with an oversized shotgun, including its flirting processor.
+  components:
+  - type: HTN
+    rootTask:
+      task: GlockroachCompound
+    blackboard:
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  - type: Speech
+    speechVerb: LargeMob
+  - type: CombatMode
+  - type: MobMover
+  - type: InputMover
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1
+    baseSprintSpeed: 1
+    baseWeightlessModifier: 1.5
+  - type: Sprite
+    sprite: Mobs/Silicon/chassis.rsi
+    noRot: true
+    layers:
+    - state: synd_sec
+  - type: Appearance
+  - type: Physics
+    bodyType: KinematicController
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 100
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobState
+  - type: MobStateActions
+    actions:
+      Critical:
+      - ActionCritSuccumb
+      - ActionCritLastWords
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      450: Critical
+      500: Dead
+  - type: Flammable
+    damage:
+      types: {}
+  - type: StatusEffects
+    allowed:
+    - SlowedDown
+    - Stutter
+    - Electrocution
+    - TemporaryBlindness
+    - RadiationProtection
+  - type: Temperature
+    heatDamageThreshold: 800
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 3.00
+  - type: BasicEntityAmmoProvider
+    proto: HighCaliberPelletShotgunSpread
+    capacity: 3
+    count: 3
+  - type: Gun
+    fireRate: 5
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/smg.ogg
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+  # Goobstation - Collective mind
+  - type: CollectiveMind
+    defaultChannel: Binary
+    channels:
+    - Binary
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: CybersunShotgun
+  - type: Puller
+    needsHands: false
+  - type: NightVision
+    color: "#808080"
+    activateSound: null
+    deactivateSound: null
+  - type: ThermalVision
+  - type: CombatPower
+    factor: 4
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatDragon
+      amount: 1
