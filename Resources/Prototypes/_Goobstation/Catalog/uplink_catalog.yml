@@ -602,6 +602,7 @@
 #  categories:
 #  - UplinkWearables
 
+#Omu change - remove unbalanced item
 #- type: listing
 #  id: UplinkClothingHandsGlovesGuerrilla
 #  name: uplink-guerrilla-gloves-name
