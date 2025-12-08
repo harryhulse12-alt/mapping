@@ -6,6 +6,7 @@ using Content.Shared.Mind;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Robust.Shared.Audio;
+using Content.Server._Goobstation.Objectives.Components;
 
 namespace Content.Server._DV.Objectives.Systems;
 

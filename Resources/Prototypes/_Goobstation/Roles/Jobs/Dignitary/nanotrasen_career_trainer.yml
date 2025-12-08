@@ -7,6 +7,7 @@
   weight: 20
   startingGear: NanotrasenCareerTrainerGear
   icon: "JobIconNanotrasenTrainer"
+  ransomModifier: 5 # OMU - Most important of them all
   joinNotifyCrew: true
   supervisors: job-supervisors-ntr-centcom
   canBeAntag: false

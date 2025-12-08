@@ -4,6 +4,7 @@ using Content.Server.Objectives.Systems;
 using Content.Server.Roles;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Roles;
+using Content.Server._Goobstation.Objectives.Components;
 
 namespace Content.Server._DV.Objectives.Systems;
 

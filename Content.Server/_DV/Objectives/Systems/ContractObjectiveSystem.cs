@@ -4,6 +4,7 @@ using Content.Server.Store.Systems;
 using Content.Shared._DV.Objectives.Systems;
 using Content.Shared._DV.Reputation;
 using Content.Shared.FixedPoint;
+using Content.Server._Goobstation.Objectives.Components;
 
 namespace Content.Server._DV.Objectives.Systems;
 

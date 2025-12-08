@@ -111,6 +111,7 @@
   weight: 20
   startingGear: NanotrasenRepresentativeGear
   icon: "JobIconNanotrasenRepresentative"
+  ransomModifier: 5 # OMU - Most important of them all
   requireAdminNotify: true
   joinNotifyCrew: true
   supervisors: job-supervisors-centcom
