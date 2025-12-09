@@ -190,9 +190,6 @@
     - id: ParadoxCloneSpawn
     #- id: RevenantSpawn  # GoobStation - removed till rework
     - id: SleeperAgents
-    - id: ChangelingMidround
-    - id: HereticMidround
-    - id: Devilmidround
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
     - id: DerelictCyborgSpawn
@@ -205,6 +202,8 @@
    # - id: WraithMidround # Goobstation - Wraith - OMU Wraith is unbalanced and shit to deal with
     - id: EepletSpawn # imp
     #TODO When Slasher is Ready - id: SlasherSpawn # Goobstation - The Slasher
+    #TODO When Hastur / King in Yellow is ready - id: HasturMidround # Goobstation - The King in Yellow
+
 
 - type: entity
   id: BaseStationEvent
