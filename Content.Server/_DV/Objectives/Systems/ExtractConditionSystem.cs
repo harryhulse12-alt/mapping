@@ -8,6 +8,7 @@ using Content.Shared.Objectives.Systems;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+using Content.Server.Objectives.Components.Targets;
 using Content.Server._Goobstation.Objectives.Components;
 
 namespace Content.Server._DV.Objectives.Systems;

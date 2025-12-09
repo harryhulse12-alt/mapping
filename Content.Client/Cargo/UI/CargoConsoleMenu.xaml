@@ -56,7 +56,7 @@
                                 <!-- Requests are added here by code -->
                             </BoxContainer>
 
-                      </GridContainer>
+                       </BoxContainer>
 
                       <PanelContainer StyleClasses="LowDivider" Margin="0 4.5 -8 0"/>
             </BoxContainer>

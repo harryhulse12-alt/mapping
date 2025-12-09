@@ -110,8 +110,7 @@ public sealed class PickObjectiveTargetSystem : EntitySystem
         if (target.Target != null)
             return;
 
-        var allHumans = _mind.GetAliveHumans(args.MindId,
-            ent.Comp.NeedsOrganic, ent.Comp.ExcludeChangeling); // Goob edit - exclude IPCs and/or changelings
+        var allHumans = _mind.GetAliveHumans(args.MindId, ent.Comp.NeedsOrganic, ent.Comp.ExcludeChangeling); // Goob edit - exclude IPCs and/or changelings
 
         // Can't have multiple objectives to kill the same person
         foreach (var objective in args.Mind.Objectives)
@@ -149,43 +148,43 @@ public sealed class PickObjectiveTargetSystem : EntitySystem
         _target.SetTarget(ent.Owner, _random.Pick(allHumans), target);
     }
 
-    private void OnRandomHeadAssigned(Entity<PickRandomHeadComponent> ent, ref ObjectiveAssignedEvent args)
-    {
-        // invalid prototype
-        if (!TryComp<TargetObjectiveComponent>(ent.Owner, out var target))
-        {
-            args.Cancelled = true;
-            return;
-        }
-
+//    private void OnRandomHeadAssigned(Entity<PickRandomHeadComponent> ent, ref ObjectiveAssignedEvent args)
+//    {
+//        // invalid prototype
+//        if (!TryComp<TargetObjectiveComponent>(ent.Owner, out var target))
+//        {
+//            args.Cancelled = true;
+//            return;
+//        }
+//
         // target already assigned
-        if (target.Target != null)
-            return;
-
-        // no other humans to kill
-        var allHumans = _mind.GetAliveHumans(args.MindId);
-        if (allHumans.Count == 0)
-        {
-            args.Cancelled = true;
-            return;
-        }
-
-        var allHeads = new HashSet<Entity<MindComponent>>();
-        foreach (var person in allHumans)
-        {
-            if (TryComp<MindComponent>(person, out var mind) && mind.OwnedEntity is { } owned && HasComp<CommandStaffComponent>(owned) && !HasComp<NukeOperativeComponent>(owned))
-                allHeads.Add(person); // Goob edit - exclude nuke ops from being selected as heads (bruh why would you even want that)
-        }
+//        if (target.Target != null)
+//            return;
+//
+//        // no other humans to kill
+//        var allHumans = _mind.GetAliveHumans(args.MindId);
+//        if (allHumans.Count == 0)
+//        {
+//            args.Cancelled = true;
+//            return;
+//        }
+//
+//        var allHeads = new HashSet<Entity<MindComponent>>();
+//        foreach (var person in allHumans)
+//        {
+//            if (TryComp<MindComponent>(person, out var mind) && mind.OwnedEntity is { } owned && HasComp<CommandStaffComponent>(owned) && !HasComp<NukeOperativeComponent>(owned))
+//                allHeads.Add(person); // Goob edit - exclude nuke ops from being selected as heads (bruh why would you even want that)
+//        }
 
         // Goobstation - Cancel if there is no command staff
-        if (allHeads.Count == 0)
-        {
-            args.Cancelled = true;
-            return;
-        }
+//        if (allHeads.Count == 0)
+//        {
+//            args.Cancelled = true;
+//            return;
+//        }
 
-        _target.SetTarget(ent.Owner, _random.Pick(allHeads), target);
-    }
+//        _target.SetTarget(ent.Owner, _random.Pick(allHeads), target);
+//    }
 
     private void OnRandomTraitorProgressAssigned(Entity<RandomTraitorProgressComponent> ent, ref ObjectiveAssignedEvent args)
     {
