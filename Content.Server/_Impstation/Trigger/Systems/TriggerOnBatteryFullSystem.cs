@@ -1,8 +1,6 @@
 using Content.Server._Impstation.Trigger.Components.Triggers;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
-using Content.Shared.Power;
-using Content.Shared.Power.Components;
 using Content.Server.Explosion.EntitySystems;
 
 namespace Content.Server._Impstation.Trigger.Systems;

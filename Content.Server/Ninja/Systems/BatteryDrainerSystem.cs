@@ -36,9 +36,12 @@ public sealed class BatteryDrainerSystem : SharedBatteryDrainerSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<BatteryDrainerComponent, ComponentStartup>(OnStartup); // imp add
         SubscribeLocalEvent<BatteryDrainerComponent, BeforeInteractHandEvent>(OnBeforeInteractHand);
         SubscribeLocalEvent<BatteryDrainerComponent, NinjaBatteryChangedEvent>(OnBatteryChanged);
+
+        // Imp Station
+        SubscribeLocalEvent<BatteryDrainerComponent, ComponentStartup>(OnStartup);
+
     }
 
     /// <summary>
@@ -115,10 +118,10 @@ public sealed class BatteryDrainerSystem : SharedBatteryDrainerSystem
         var available = targetBattery.CurrentCharge;
         var required = battery.MaxCharge - battery.CurrentCharge;
         // higher tier storages can charge more
-        // IMP EDIT START- why the fuck does draintime affecting the amount drained go undocumented!!!
-        var maxDrained = comp.FullDrain ?
-            pnb.MaxSupply * comp.DrainTime :
-            required;
+        // IMP EDIT START-why the fuck does draintime affecting the amount drained go undocumented!!!
+        var maxDrained = comp.FullDrain
+            ? pnb.MaxSupply * comp.DrainTime
+            : required;
         // IMP EDIT END
         var input = Math.Min(Math.Min(available, required / comp.DrainEfficiency), maxDrained);
         if (!_battery.TryUseCharge(target, input, targetBattery))
