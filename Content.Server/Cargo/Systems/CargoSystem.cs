@@ -155,7 +155,6 @@ public sealed partial class CargoSystem : SharedCargoSystem
         InitializeTelepad();
         InitializeBounty();
         InitializeFunds();
-        InitializeATS(); // DeltaV
         InitializeRansom(); // DeltaV
     }
 

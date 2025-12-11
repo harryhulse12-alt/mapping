@@ -124,7 +124,7 @@ public sealed partial class CargoSystem
 
             // sleepy time
             _audio.PlayPvs(HypoSound, uid);
-            _statusEffects.TryAddStatusEffect<ForcedSleepingComponent>(uid, StatusEffectKey, SleepyTime, refresh: false);
+            _statusEffects.TryAddStatusEffect<ForcedSleepingStatusEffectComponent>(uid, StatusEffectKey, SleepyTime, refresh: false);
 
             var pad = _random.Pick(freePads);
             var coordinates = new EntityCoordinates(trade, pad.Transform.LocalPosition);

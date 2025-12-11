@@ -572,7 +572,6 @@ namespace Content.Server.Cargo.Systems
                     GetNetEntity(station.Value),
                     RelevantOrders((station!.Value, orderDatabase), (consoleUid, console)),
                     GetAvailableProducts((consoleUid, console)),
-                    orderDatabase.Orders[console.Account],
                     _ransom.GetRansoms() // DeltaV
                 ));
             }

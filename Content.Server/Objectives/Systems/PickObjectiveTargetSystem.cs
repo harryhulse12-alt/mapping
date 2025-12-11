@@ -110,7 +110,7 @@ public sealed class PickObjectiveTargetSystem : EntitySystem
         if (target.Target != null)
             return;
 
-        var allHumans = _mind.GetAliveHumans(args.MindId, ent.Comp.NeedsOrganic, ent.Comp.ExcludeChangeling); // Goob edit - exclude IPCs and/or changelings
+        var allHumans = _mind.GetAliveHumans(args.MindId, target.Comp.NeedsOrganic, target.Comp.ExcludeChangeling); // Goob edit - exclude IPCs and/or changelings
 
         // Can't have multiple objectives to kill the same person
         foreach (var objective in args.Mind.Objectives)
@@ -145,7 +145,7 @@ public sealed class PickObjectiveTargetSystem : EntitySystem
             return;
         }
 
-        _target.SetTarget(ent.Owner, _random.Pick(allHumans), target);
+        _target.SetTarget(target.Owner, _random.Pick(allHumans), target);
     }
 
 //    private void OnRandomHeadAssigned(Entity<PickRandomHeadComponent> ent, ref ObjectiveAssignedEvent args)
