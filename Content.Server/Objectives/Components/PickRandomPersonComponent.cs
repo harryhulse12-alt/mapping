@@ -24,4 +24,11 @@ public sealed partial class PickRandomPersonComponent : Component
 
     [DataField]
     public bool ExcludeChangeling; // Goobstation: Determine if you can get changelings as an objective
+
+    /// <summary>
+    /// DeltaV: If true a target must have a job with SetPreference set to true.
+    /// </summary>
+
+    [DataField]
+    public bool OnlyChoosableJobs;
 }
