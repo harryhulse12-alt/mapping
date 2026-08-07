@@ -95,6 +95,7 @@
   - type: Targeting
   - type: Bloodstream
     maxBleedAmount: 0
+  - type: SeeHereticFixtures    #Omu - see heretic fixtures on ghouls
 
 - type: entity
   parent: BaseMobGhoul
