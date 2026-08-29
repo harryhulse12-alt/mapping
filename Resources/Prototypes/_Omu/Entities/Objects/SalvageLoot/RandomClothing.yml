@@ -1,0 +1,67 @@
+# the randomcomps system will stitch together lists, dictionaries and component registries but will override anything else.
+
+# to make a new entry, use - components: to create the randomcomponententry, then fill in any components as required. You CAN use multiple components in one entry but only one of each component type.
+- type: entity
+  abstract: true
+  id: BaseRandomClothing
+  name: base random clothing
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomComps
+    numberOfComps: 2
+    comps:
+
+    - components:
+      - type: RandomRadiation
+        maxValue: 10
+
+    - components:
+      - type: ClothingGrantComponent
+        component:
+        - type: Prying
+          pryPowered: true
+          force: true
+          speedModifier: 1
+          useSound:
+            path: /Audio/Items/crowbar.ogg
+
+    - components:
+      - type: ClothingGrantComponent
+        component:
+        - type: BatteryAmmoProvider
+          proto: RedLightLaser
+          fireCost: 50
+        - type: BatterySelfRecharger
+          autoRechargeRate: 25
+        - type: Battery
+          maxCharge: 100
+          startingCharge: 0
+        - type: Gun
+          fireRate: 1
+          useKey: false
+          selectedMode: SemiAuto
+          availableModes:
+            - SemiAuto
+          soundGunshot: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+
+    - components:
+      - type: PointLight
+        enabled: true
+        radius: 5
+
+    - components:
+      - type: Thieving
+        stripTimeReduction: 1
+        stealthy: true
+
+    - components:
+      - type: RandomImplants
+        implants:
+        - MindShieldImplant
+        - MicroBombImplant
+
+    - components:
+      - type: RandomImplants
+        implants:
+        - FakeMindShieldImplant
+        - NutrimentPumpImplant

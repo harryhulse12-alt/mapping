@@ -1,0 +1,72 @@
+- type: entity
+  parent: [ClothingOuterHardsuitBase, BaseRandomClothing]
+  id: ClothingOuterHardsuitEpidermis
+  name: Epidermal hardsuit
+  description: A strange layer of chitin, muscle and what looks like skin. It seems to mold itself around anything that touches it.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Changeling/ling_spacesuit.rsi
+  - type: Clothing
+    sprite: _Goobstation/Changeling/ling_spacesuit.rsi
+    equipDelay: 15
+    unequipDelay: 600
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: FireProtection
+    reduction: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.3
+        Radiation: 0.0
+        Caustic: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototypes:
+      head: ClothingHeadHelmetHardsuitEpidermis
+  - type: ClothingGrantComponent
+    component:
+    - type: SupermatterImmune
+    - type: EventHorizonIgnore
+      horizonWhitelist:
+        tags:
+        - Tesla
+    - type: ContainmentFieldIgnore
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitEpidermis
+  name: Epidermal helmet
+  description: A strange layer of chitin, muscle and what looks like skin. It seems to mold itself around anything that touches it.
+  suffix: Unremoveable
+  components:
+  - type: Item
+  - type: Sprite
+    sprite: _Goobstation/Changeling/ling_spacesuit_helmet.rsi
+  - type: Clothing
+    sprite: _Goobstation/Changeling/ling_spacesuit_helmet.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.225
+    lowPressureMultiplier: 1000
+  - type: Armor
+    coverage:
+    - Head
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.9
+        Heat: 0.4
