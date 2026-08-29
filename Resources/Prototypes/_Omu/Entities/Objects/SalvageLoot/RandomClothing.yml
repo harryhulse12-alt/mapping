@@ -73,3 +73,9 @@
         clothing: true
         implants:
         - DeathAcidifierImplant
+
+    - components:
+      - type: ClothingAutoInject
+        reagents:
+          Epinephrine: 10
+          Bicaridine: 10
