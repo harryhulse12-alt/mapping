@@ -58,44 +58,47 @@ public sealed class RandomCompsSystem : EntitySystem
         }
     }
 
-    private void MergeComponent(IComponent target, IComponent incoming)
+    private void MergeComponent(IComponent target, IComponent incoming)  //Annotation = understanding
     {
         var type = target.GetType();
 
-        foreach (var property in type.GetProperties(
+        foreach (var property in type.GetProperties(                //Get each property/datafield and its flags
             BindingFlags.Instance |
             BindingFlags.Public |
             BindingFlags.NonPublic))
         {
-            var dataField = property.GetCustomAttribute<DataFieldAttribute>();
+            var dataField = property.GetCustomAttribute<DataFieldAttribute>();      //slop it in a datafield variable
 
-            if (dataField == null)
+            if (dataField == null)      //Obv if null don't
                 continue;
 
-            if (!property.CanRead)
+            if (!property.CanRead)      //If we can't read it continue obv
                 continue;
 
-            var incomingValue = property.GetValue(incoming);
+            var incomingValue = property.GetValue(incoming);        //Get the value of the datafield we want to apply
 
-            if (incomingValue == null)
+            if (incomingValue == null)      //If its null just continue
                 continue;
 
-            var targetValue = property.GetValue(target);
+            var targetValue = property.GetValue(target);        //Get the existing value
 
-            if (incomingValue is IList incomingList &&
+            if (targetValue == null)        //Check if our target is null.
+                continue;
+
+            if (incomingValue is IList incomingList &&      // Meat and gravy, is it a list
                 targetValue is IList targetList)
             {
                 foreach (var item in incomingList)
-                    targetList.Add(item);
+                    targetList.Add(item);               //if its a list we want to add items to it.
 
-                continue;
+                continue;   //exit
             }
 
             if (incomingValue is IDictionary incomingDict &&
-                targetValue is IDictionary targetDict)
+                targetValue is IDictionary targetDict)      //if its a dictionary
             {
                 foreach (DictionaryEntry entry in incomingDict)
-                    targetDict[entry.Key] = entry.Value;
+                    targetDict[entry.Key] = entry.Value;        //Create a dictionary entry with that key and give it that value
 
                 continue;
             }
@@ -104,12 +107,12 @@ public sealed class RandomCompsSystem : EntitySystem
                 targetValue is ComponentRegistry targetRegistry)
             {
                 foreach (var (key, entry) in incomingRegistry)
-                    targetRegistry[key] = entry;
+                    targetRegistry[key] = entry;            //basically the same as with a dictionary
 
                 continue;
             }
 
-            if (property.CanWrite)
+            if (property.CanWrite)          //If its not one of the above, override it and just setvalue
                 property.SetValue(target, incomingValue);
         }
     }

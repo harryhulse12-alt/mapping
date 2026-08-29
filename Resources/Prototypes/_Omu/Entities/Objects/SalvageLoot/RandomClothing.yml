@@ -56,17 +56,20 @@
 
     - components:
       - type: RandomImplants
+        clothing: true
         implants:
         - MindShieldImplant
         - MicroBombImplant
 
     - components:
       - type: RandomImplants
+        clothing: true
         implants:
         - FakeMindShieldImplant
         - NutrimentPumpImplant
 
     - components:
       - type: RandomImplants
+        clothing: true
         implants:
         - DeathAcidifierImplant
