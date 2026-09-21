@@ -4,3 +4,11 @@
   keycode: 'd'
   color: "#454d31"
   longRange: true
+
+- type: radioChannel
+  id: Revolution
+  name: chat-radio-revolutionary
+  keycode: 'r'
+  frequency: 1984
+  color: "#f6ce64"
+  longRange: false

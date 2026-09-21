@@ -1,0 +1,12 @@
+- type: listing
+  id: RevolutionaryUplinkRadioKey
+  name: radio key
+  description: A radio key for the Revolutionary radio channel! Set it up somewhere secure and keep it safe!
+  productEntity:
+  cost:
+    Telecrystal: 10 # Temporary price # Omu, replace revcoin with TC
+  categories:
+  - RevolutionaryUplinkDefault
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
