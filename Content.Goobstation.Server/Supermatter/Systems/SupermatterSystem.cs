@@ -911,7 +911,7 @@ public sealed class SupermatterSystem : SharedSupermatterSystem
         {
             // todo omu what the fuck is this shit
             var diff = sm.RadiationOutputFactor - sm.RadiationOutputFactorSetpoint;
-            diff = diff/50;
+            diff = diff/5;      //Making this decay faster fuck round 7181
             Math.Round(diff, 5);
             if (diff >0)
                 sm.RadiationOutputFactor = sm.RadiationOutputFactor - diff;
